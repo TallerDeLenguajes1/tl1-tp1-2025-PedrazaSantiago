@@ -1,33 +1,33 @@
 #include <stdio.h>
 
-void f_alpha(int *p) {
-    int temp = *p;
-    int rev = 0;
+void invertirNumero(int *ref_num) {
+    int temp = *ref_num;
+    int num_invertido = 0;
     while (temp > 0) {
-        rev = (rev * 10) + (temp % 10);
+        num_invertido = (num_invertido * 10) + (temp % 10);
         temp = temp / 10;
     }
-    *p = rev;
+    *ref_num = num_invertido;
 }
 
-void f_beta(int *p) {
-    *p = *p / 2;
+void divideEnDos(int *ref_num) {
+    *ref_num = *ref_num / 2;
 }
 
-void f_gamma(int *p) {
-    int temp = *p;
-    int suma = 0;
+void sumaDigitos(int *ref_num) {
+    int temp = *ref_num;
+    int suma_dig = 0;
     while (temp > 0) {
-        suma = suma + (temp % 10);
+        suma_dig = suma_dig + (temp % 10);
         temp = temp / 10;
     }
-    *p = *p + suma;
+    *ref_num = *ref_num + suma_dig;
 }
 
 void procesar_enigma(int *valor_referencia) {
-    f_alpha(valor_referencia);
-    f_beta(valor_referencia);
-    f_gamma(valor_referencia);
+    invertirNumero(valor_referencia);
+    divideEnDos(valor_referencia);
+    sumaDigitos(valor_referencia);
 }
 
 int main() {
