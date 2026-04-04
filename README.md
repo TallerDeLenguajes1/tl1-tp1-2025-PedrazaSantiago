@@ -35,3 +35,17 @@ La variable rev fue renombrada a num_invertido, ya que almacena el número inver
 La variable suma fue renombrada a suma_dig para reflejar mejor su propósito.
 
 - La función procesar_enigma ejecuta en orden las funciones anteriores, aplicando una serie de transformaciones sobre el valor recibido por referencia
+
+## Punto 4
+
+### Si resolvió correctamente los apartados 2 y 3 del punto anterior notará que el resultado es el mismo. ¿a qué se debe?
+
+_ Porque el puntero almacena como valor la direccion de memoria de la variable. Al mostrar la dirección de la variable (&variable) y lo que guarda el puntero (p_variable), vemos el mismo numero
+
+### ¿Qué obtiene en el punto 4?
+
+_ Se obtiene la direccion de memoria del propio puntero en si
+
+### Es igual a los anteriores? ¿Por qué?
+
+_ No, es distinta. El puntero es una variable independiente
